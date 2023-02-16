@@ -7,6 +7,20 @@
   --light-mode-color: #f4f4fd;
   --pressed-state-color: #404bbf;
 }
+
+.visually-hidden {
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  margin: -1px;
+}
+
 body {
   font-family: 'Roboto', 'Raleway', sans-serif;
   background-color: #fff;
@@ -25,6 +39,23 @@ button {
   align-items: center;
   border-radius: 4px;
   cursor: pointer;
+}
+
+.title {
+  color: var(--headings-dark-color);
+  font-size: 36px;
+  line-height: 1.11;
+  letter-spacing: 0.02em;
+  text-align: center;
+  text-transform: capitalize;
+}
+
+.subtitle {
+  color: var(--headings-dark-color);
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 1.2;
+  letter-spacing: 0.02em;
 }
 
 .link {
@@ -83,7 +114,6 @@ button {
   color: var(--primary-white-color);
 }
 .hero-title {
-  font-weight: 700;
   font-size: 56px;
   line-height: 1.07;
   text-align: center;
@@ -108,26 +138,6 @@ button {
 }
 
 /* Features */
-.features .title {
-  opacity: 0;
-}
-
-.title {
-  color: var(--headings-dark-color);
-  font-weight: 700;
-  font-size: 36px;
-  line-height: 1.11;
-  letter-spacing: 0.02em;
-  text-align: center;
-}
-
-.subtitle {
-  color: var(--headings-dark-color);
-  font-weight: 500;
-  font-size: 20px;
-  line-height: 1.2;
-  letter-spacing: 0.02em;
-}
 
 /* What are we doing */
 .examples {
@@ -140,6 +150,11 @@ button {
 }
 .team-card .list {
   background-color: var(--primary-white-color);
+}
+
+.team-card .subtitle,
+.team-card p {
+  text-align: center;
 }
 
 /* Footer */
@@ -167,16 +182,13 @@ button {
 .filter .button:focus {
   background: var(--pressed-state-color);
   color: var(--primary-white-color);
-  border: none;
+  border-color: transparent;
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 2px 1px rgba(0, 0, 0, 0.08),
     0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
 /* Project cards */
 
-.project-card > h1 {
-  opacity: 0;
-}
 .card-link {
   text-decoration: none;
 }
